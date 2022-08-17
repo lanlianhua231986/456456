@@ -1,0 +1,21 @@
+<van-cell title="选择日期" value="{{ text }}" bind:click="onDisplay" style="text-align: center;" 
+/>
+<van-calendar
+color="#4988FD"
+  show="{{ show }}"
+  type="multiple"
+  bind:close="onClose"
+  bind:confirm="onConfirm"
+  show-title="{{false}}"
+  show-mark="{{false}}"
+  formatter="{{formatter}}"
+/>
+<van-toast id="van-toast" />
+<van-dialog id="van-dialog" />
+
+
+
+<van-tabbar active="{{ active }}" bind:change="onChange">
+  <van-tabbar-item icon="notes-o">记录</van-tabbar-item>
+  <van-tabbar-item icon="bar-chart-o">统计分析</van-tabbar-item>
+</van-tabbar>
